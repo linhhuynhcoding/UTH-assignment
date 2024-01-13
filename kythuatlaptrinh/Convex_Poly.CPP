@@ -6,15 +6,30 @@ struct Point
     float x, y;
 };
 
-pair<float, float> findCoso(Point p1, Point p2)
+struct Segment 
 {
-    if (p2.x == p1.x)
-        return {p1.x, 0};
+    float a, b;
+    float c = 1;
+};
 
-    float b = (p1.y * p2.x - p2.y * p1.x) / (p2.x - p1.x);
-    float a = (p1.y - b) / p1.x;
+Segment findCoso(Point p1, Point p2)
+{
+    if (p2.x == p1.x) return {1, 0, -p1.x};
+    if (p2.y == p1.y) return {0, 1, -p1.y};
 
-    return {a, b};
+    if (p1.y * p2.x ==  p2.y * p1.x) {
+        float a = - p1.y / p1.x;
+        return {a, 1, 0};
+    }
+
+    float a = (p1.y - p2.y) / (p1.x * p2.y - p2.x * p1.y);
+    float b ;
+    if (p1.y == 0)
+        b = (-1 - a * p2.x) / p2.y;
+    else
+        b = (-1 - a * p1.x) / p1.y;
+
+    return {a, b, 1};
 }
 
 // kiểm tra có tồn tại đường thẳng ngoài cùng đa giác đi qua điểm p1 và p2
@@ -24,15 +39,15 @@ int checkSide(int p1, int p2, int numsofPoint, vector<Point> Points)
     // trả về 1 nếu không tồn tại đường thẳng ngoài cùng đa giác
     // trả về 2 nếu tồn tại đường thẳng ngoài cùng đa giác
 
-    // tìm cơ số a, b của đường thẳng đi qua p1, p2
-    pair<float, float> segment = findCoso(Points[p1], Points[p2]);
-    float a = segment.first;
-    float b = segment.second;
-    //đường thẳng có dạng : y = ax + b
+    // tìm cơ số a, b, c của đường thẳng đi qua p1, p2
+    // đường thẳng có dạng : ax + by + c = 0
+    Segment segment = findCoso(Points[p1], Points[p2]);
+    float a = segment.a;
+    float b = segment.b;
+    float c = segment.c;
 
     int sideA = 0;
     int sideB = 0;
-
     for (int i = 0; i < numsofPoint; i++)
     {
         if (i == p1 || i == p2)
@@ -40,29 +55,16 @@ int checkSide(int p1, int p2, int numsofPoint, vector<Point> Points)
         float x = Points[i].x;
         float y = Points[i].y;
 
-        float checkValue = a * x - y + b;
-
-        if (a == (float)0)
-        {
-            if (y > b)
-                checkValue = 1;
-            else if (y == b)
-                checkValue = 0;
-            else
-                checkValue = -1;
-        }
-        else if (b == y)
-        {
-            if (x > a)
-                checkValue = 1;
-            else if (x == a)
-                checkValue = 0;
-            else
-                checkValue = -1;
-        }
+        float checkValue = a * x + b * y + c;
 
         if (checkValue == 0) // trả về 0 nếu tồn tại 3 điểm thẳng hàng
+        {
+            cout << "Ton tai 3 diem thang hang : " ;
+            cout << "(" << Points[p1].x <<", " << Points[p1].y << ") " ;
+            cout << "(" << Points[p2].x <<", " << Points[p2].y << ") " ;
+            cout << "(" << Points[i].x <<", " << Points[i].y << ") " ;
             return 0;
+        }
         else if (checkValue > 0)
             sideA++;
         else
@@ -89,7 +91,6 @@ bool Convex_Poly(int numsofPoint, vector<Point> Points)
             if (j == i)
                 continue;
             int check = checkSide(i, j, numsofPoint, Points);
-
             // Nếu tồn tại đường thẳng đi qua 3 điểm => đa giác lõm
             if (check == 0)
                 return false;
@@ -100,15 +101,19 @@ bool Convex_Poly(int numsofPoint, vector<Point> Points)
             }
         }
         // Nếu tồn tại điểm không nằm trên đường thẳng ngoài cùng => đa giác lõm
-        if (flag == false)
+        if (flag == false) {
+            cout << "Ton tai diem khong nam tren duong thang ngoai cung bat ky : " ;
+            cout << "(" << Points[i].x <<", " << Points[i].y << ") " ;
+            
             return false;
+        }
     }
     return true;
 }
 
 int main()
 {
-    freopen("in.txt", "r", stdin);
+    // freopen("in.txt", "r", stdin);
     int numsofPoint;
     cin >> numsofPoint;
     vector<Point> Points(numsofPoint);
@@ -121,5 +126,5 @@ int main()
     if (Convex_Poly(numsofPoint, Points))
         cout << "Da giac Loi";
     else
-        cout << "Da giac lom";
+        cout << "\nDa giac lom";
 }
