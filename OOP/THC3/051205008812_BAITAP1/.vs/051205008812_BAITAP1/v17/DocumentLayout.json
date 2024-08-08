@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\051205008812_BAITAP1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|solutionrelative:051205008812_BAITAP1\\051205008812_BAITAP1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|solutionrelative:051205008812_BAITAP1\\CauhoiTN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\DETHI.TTN||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|solutionrelative:051205008812_BAITAP1\\DETHI.TTN||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{31512968-0C6C-4E63-912E-2CCA2082D145}|051205008812_BAITAP1\\051205008812_BAITAP1.vcxproj|solutionrelative:051205008812_BAITAP1\\CauhoiTN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DETHI.TTN",
+              "DocumentMoniker": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\DETHI.TTN",
+              "RelativeDocumentMoniker": "051205008812_BAITAP1\\DETHI.TTN",
+              "ToolTip": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\DETHI.TTN",
+              "RelativeToolTip": "051205008812_BAITAP1\\DETHI.TTN",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-03-20T12:24:35.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CauhoiTN.h",
+              "DocumentMoniker": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.h",
+              "RelativeDocumentMoniker": "051205008812_BAITAP1\\CauhoiTN.h",
+              "ToolTip": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.h",
+              "RelativeToolTip": "051205008812_BAITAP1\\CauhoiTN.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-03-20T12:05:43.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CauhoiTN.cpp",
+              "DocumentMoniker": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.cpp",
+              "RelativeDocumentMoniker": "051205008812_BAITAP1\\CauhoiTN.cpp",
+              "ToolTip": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\CauhoiTN.cpp",
+              "RelativeToolTip": "051205008812_BAITAP1\\CauhoiTN.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAgwB0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-20T12:05:07.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "051205008812_BAITAP1.cpp",
+              "DocumentMoniker": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\051205008812_BAITAP1.cpp",
+              "RelativeDocumentMoniker": "051205008812_BAITAP1\\051205008812_BAITAP1.cpp",
+              "ToolTip": "D:\\Coding\\UTH\\oop\\THC3\\051205008812_BAITAP1\\051205008812_BAITAP1\\051205008812_BAITAP1.cpp",
+              "RelativeToolTip": "051205008812_BAITAP1\\051205008812_BAITAP1.cpp",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAgwCsAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-20T11:58:46.177Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

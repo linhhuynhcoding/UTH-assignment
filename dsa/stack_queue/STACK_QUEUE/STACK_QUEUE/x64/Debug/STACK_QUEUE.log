@@ -1,0 +1,3 @@
+﻿  STACK_QUEUE.cpp
+D:\Coding\UTH\dsa\stack_queue\STACK_QUEUE\STACK_QUEUE\STACK_QUEUE.cpp(25,9): warning C4101: 'tmp': unreferenced local variable
+  STACK_QUEUE.vcxproj -> D:\Coding\UTH\dsa\stack_queue\STACK_QUEUE\x64\Debug\STACK_QUEUE.exe
