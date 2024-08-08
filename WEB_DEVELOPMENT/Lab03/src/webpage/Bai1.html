@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Lab03/src/styles/styles1.css">
+    <title>Lab03 - Bài 1</title>
+</head>
+<body>
+    <h2>SAO </h2>
+    <br>
+    <em>
+        <div id="p1">
+            MỘT NGÔI SAO VỪA RƠI <br>
+            VỤT TẮT TREN BẦU TRỜI <br>
+            HAY LÀ TÊN NGƯỜI ẤY <br>
+            VỤT TẮT TRONG LÒNG TÔI  <br><br>
+        </div>
+        <div id="p2">
+            VẪN THẤY TRÊN BẦU TRỜI  <br> 
+            CÓ MUÔN VÀN SAO SÁNG <br>
+            MÀ Ở TRONG LÒNG TÔI <br>
+            NHƯ MỘT HÀNH LANG VẮNG <br> <br>
+        </div>
+        <div id="p3">
+            MỘT NGÔI SAO VỪA TẮT  <br>
+            BẦU TRỜI VẪN KHÔNG BUỒN <br>
+            SAO TÊN NGƯỜI ẤY TẮT <br>
+            TRONG LÒNG TÔI CÔ ĐƠN <br>
+        </div>
+    </em>
+    <script>
+        p1 = document.getElementById("p1");
+        p2 = document.getElementById("p2");
+        p3 = document.getElementById("p3");
+
+        function sleep(ms) {
+            return new Promise(resolse => setTimeout(resolse, ms));
+        }
+
+        async function demo() {
+            for (let i = 0; i < 1000; i ++){
+                p1.style.color = 'red';
+                p3.style.color = 'violet';
+                await sleep(500);
+                p1.style.color = 'green';
+                p2.style.color = 'red';
+                p3.style.color = 'black';
+                await sleep(500);
+                p1.style.color = 'red';
+                p2.style.color = 'black';
+                p3.style.color = 'green';
+                await sleep(500);
+                p2.style.color = 'green';
+                p1.style.color = 'yellow';
+                p3.style.color = 'red';
+                await sleep(500);
+            }
+        }
+
+        demo();
+    </script>
+</body>
+</html>
