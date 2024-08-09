@@ -9,7 +9,7 @@ body {
 }
 
 .container > header {
-    background-image: url('/Lab04/assets/logo_uth.jpg');
+    background-image: url('../../assets/logo_uth.jpg');
     background-size: 100% 100%;
     height: 0px;
     padding-bottom: 25%;
@@ -70,8 +70,8 @@ iframe[name=page]{
     box-shadow:0 0 2 pixel gray;
 }
 
-.vnmenu > a {
-    background: url('/Lab04/assets/bell.gif') no-repeat 10 pixel center ;
+.vnmenu > li > a {
+
     display: block ;
     border-bottom: 1 pixel dotted orangered ;
     color: orangered ;
@@ -81,11 +81,18 @@ iframe[name=page]{
     padding: 8 pixel 5 pixel 8 pixel 30 pixel ;
 }
 
-.vnmenu > a:hover{
-    background: url('/Lab04/assets/check.jpg') no-repeat 10 pixel center ;
+.vnmenu > li > a:hover{
+    /* background: url('../../assets/check.jpg') no-repeat 10 pixel center ; */
     border-bottom: 1 pixel dotted white ;
     background-color: orangered ;
     color: white ;
     font-weight: bold;
 
+}
+
+.vnmenu a {
+    background: url('../../assets/bell.gif') no-repeat left top ;
+}
+.vnmenu a:hover {
+    background: url('../../assets/check.jpg') no-repeat left top;
 }
