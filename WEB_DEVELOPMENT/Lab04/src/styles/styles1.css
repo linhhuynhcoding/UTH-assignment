@@ -1,6 +1,8 @@
 body {
     padding: 0px;
     margin: 0px;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
@@ -33,7 +35,7 @@ body {
 .container > aside {
     min-height:400px; 
     width:25%; 
-    background-color:lightgray; 
+    background-color:rgb(255, 208, 91); 
     float:right; 
 }
 
@@ -46,14 +48,14 @@ body {
     clear:both; 
 }
 
-.container > nav > a {
+.container > nav a {
     color:white; 
     text-decoration:none; 
-    margin:0 10px; 
+    padding: 10px;
 }
 
-.container > nav > a:hover {
-    color:yellow;
+.container > nav a:hover {
+    background-color:rgb(150, 45, 7);
     text-decoration: underline;
 }
 
@@ -61,38 +63,52 @@ iframe[name=page]{
     width: 100%;
     min-height: 400px;
 }
-
+.menu > ul {
+    list-style: none;
+    font-weight: bold;
+}
+.menu > ul  li {
+    display: inline-block;
+    list-style: none;
+}
 .vnmenu {
-    padding:0 pixel ;
-    margin:5 pixel ;
     list-style:none ;
-    border-radius:3 pixel ;
-    box-shadow:0 0 2 pixel gray;
+    border-radius:3px;
+    box-shadow:0 0 2px gray;
 }
 
-.vnmenu > li > a {
-
+.vnmenu a {
+    background: url('../../assets/bell.gif') no-repeat left center;    
     display: block ;
-    border-bottom: 1 pixel dotted orangered ;
+    width: 100%;
+    border-bottom: 1px dotted orangered ;
     color: orangered ;
     font-variant: small-caps ;
     font-size: larger ;
     text-decoration: none ;
-    padding: 8 pixel 5 pixel 8 pixel 30 pixel ;
+    padding: 8px 5px 8px 30px ;
 }
 
-.vnmenu > li > a:hover{
-    /* background: url('../../assets/check.jpg') no-repeat 10 pixel center ; */
-    border-bottom: 1 pixel dotted white ;
+.vnmenu a:hover{
+    background: url('../../assets/check.jpg') no-repeat left center;
+    border-bottom: 1px dotted white ;
     background-color: orangered ;
     color: white ;
     font-weight: bold;
-
+    
 }
 
-.vnmenu a {
-    background: url('../../assets/bell.gif') no-repeat left top ;
+ul {
+    padding-inline: 0;
 }
-.vnmenu a:hover {
-    background: url('../../assets/check.jpg') no-repeat left top;
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100px;
+    background-color: orangered;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
