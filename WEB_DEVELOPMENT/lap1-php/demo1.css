@@ -1,0 +1,9 @@
+div{
+    border: 2px solid red;
+    width: 300px;
+    background-color: rgb(0, 255, 200);
+    border-radius: 30px;
+}
+p{
+    color:rgb(153, 0, 255)
+}

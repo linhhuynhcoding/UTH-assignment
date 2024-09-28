@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLAB05-Bài2-Giỏ hàng</title>
+
+    <style>
+        body {
+            display: flex;
+            margin: auto;
+            font: 200;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: fit-content;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid black;
+            margin-top: 50px;
+            padding: 0px 20px;
+        }
+
+        h3 {
+            display: block;
+            width: fit-content;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid brown;
+        }
+
+        tbody tr:hover {
+            background-color: cornsilk;
+        }
+
+        th,
+        td {
+
+            padding: 2px 20px;
+        }
+
+        thead th:nth-child(1) {
+            width: 5%;
+            padding: 2px 2px;
+        }
+
+        thead th:nth-child(2) {
+            width: 55%;
+        }
+
+        thead th:nth-child(3) {
+            width: 30%;
+        }
+
+        thead th:nth-child(4) {
+            width: 10%;
+        }
+    </style>
+
+    <script>
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="info">
+            <h1>Tiệm Hoa</h1>
+            <table id="tiemhoa">
+                <thead>
+                    <tr>
+                        <th><input id="checkAll" type="checkbox"></th>
+                        <th>Tên các sản phẩm</th>
+                        <th>Giá (VND)</th>
+                        <th>Mua</th>
+
+                    </tr>
+                </thead>
+                <tbody id="data_sp">
+                    <tr data-id="sp_1">
+                        <td data-type="checkbox"><input type="checkbox"></td>
+                        <td data-type="name"></td>
+                        <td data-type="price"></td>
+                        <td data-type="btn"><button type="button" disabled>Chọn</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="cart">
+            <h1>Giỏ hàng</h1>
+            <table id="giohang">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Tên các sản phẩm</th>
+                        <th>Giá (VND)</th>
+                        <th>Xóa</th>
+
+                    </tr>
+                </thead>
+                <tbody id="data_cart">
+                    <tr data-id="1">
+                        <td data-type="cart-checkbox"><input type="checkbox"></td>
+                        <td data-type="name"></td>
+                        <td data-type="price"></td>
+                        <td data-type="btn_del"><button type="button" disabled>Xóa</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let contain = document.getElementById('data_sp');
+        let containCart = document.getElementById('data_cart');
+
+        let arr = [
+            { id: 'sp1', name: 'Sách 1', price: 120000 },
+            { id: 'sp2', name: 'Sách 2', price: 103000 },
+            { id: 'sp3', name: 'Sách 3', price: 120000 },
+            { id: 'sp4', name: 'Sách 4', price: 90000 },
+            { id: 'sp5', name: 'Sách 5', price: 16000 },
+        ];
+
+        arr.forEach((item, index) => {
+            contain.innerHTML += `
+                <tr data-id="${item['id']}">
+                <td data-type="checkbox"><input type="checkbox"></td>
+                <td data-type="name">${item['name']}</td>
+                <td data-type="price">${item['price']}</td>
+                <td data-type="btn"><button type="button" disabled>Chọn</button></td>
+                </tr>
+                `;
+        })
+        let price = document.getElementById('price');
+        let func = async () => {
+            let amountValue = document.getElementById('amountValue');
+
+            // console.dir(amountValue);
+            // console.log(amountValue['value']);
+            price.innerText = amountValue['value'] * 800 + " $";
+            price['style']['color'] = 'red';
+
+        }
+        document.querySelectorAll('td[data-type="checkbox"] > input').forEach((item, index) => {
+            item.addEventListener('change', (event) => {
+                let e = event.target;
+                // console.dir(e);
+                let btn = e.parentNode.parentNode.querySelector('td[data-type="btn"] > button');
+                // let btn = e.parentNode.querySelector('td[data-type="btn"]');
+
+                if (e.checked == true) {
+                    btn.removeAttribute('disabled');
+                }
+                else {
+                    btn.setAttribute('disabled', '');
+
+                }
+            })
+        })
+        document.querySelectorAll('td[data-type="cart-checkbox"] > input').forEach((item, index) => {
+            item.addEventListener('change', (event) => {
+                let e = event.target;
+                // console.dir(e);
+                let btn = e.parentNode.parentNode.querySelector('td[data-type="btn_del"] > button');
+                // let btn = e.parentNode.querySelector('td[data-type="btn"]');
+
+                if (e.checked == true) {
+                    btn.removeAttribute('disabled');
+                }
+                else {
+                    btn.setAttribute('disabled', '');
+
+                }
+            })
+        })
+
+        document.getElementById('checkAll').addEventListener('change', (event) => {
+            let listChecks = document.querySelectorAll('td[data-type="checkbox"] > input');
+
+            listChecks.forEach((item, index) => {
+                item.checked = event.target.checked;
+                item.dispatchEvent(new Event('change'));
+            })
+
+        })
+
+        document.querySelectorAll('td[data-type="btn"] > button').forEach((item, index) => {
+            item.addEventListener('click', (event) => {
+            let e = event.target.parentNode.parentNode;
+            let _id = e['data-id'];
+
+            
+            containCart.innerHTML += `
+                <tr data-id="${e['data-id']}_cart">
+                <td data-type="cart-checkbox"><input type="checkbox"></td>
+                <td data-type="name">${e.querySelector('td[data-type="name"]').innerText}</td>
+                <td data-type="price">${e.querySelector('td[data-type="price"]').innerText}</td>                        
+                <td data-type="btn_del"><button type="button" disabled>Xóa</button></td>
+                </tr>
+                `;
+
+        })
+        })
+        
+
+
+        
+    </script>
+</body>

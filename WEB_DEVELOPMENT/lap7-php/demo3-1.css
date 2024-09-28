@@ -1,0 +1,14 @@
+h2{
+    border : 1px solid red;
+    color: aquamarine;
+    background-color: red;
+    padding: 20px 20px 50px ;
+}
+div{
+    border: 10px solid green;
+    color: rgb(5, 67, 5);
+    background-color: greenyellow;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+}

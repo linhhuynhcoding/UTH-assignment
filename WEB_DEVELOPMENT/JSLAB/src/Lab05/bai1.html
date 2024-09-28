@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLAB05-Bài1-Mua Iphone</title>
+
+    <style>
+        body{
+            display: flex;
+            margin: auto;
+            font: 200;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: auto;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container{
+            width: auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid black;
+            margin-top: 50px;
+        }
+
+        h3{
+            display: block;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/i/p/iphone-13_2_.png" alt="">
+        <div class="info">
+            <div>
+                <label for="input">Nhập số lượng :</label>
+                <input id="amountValue" type="text">
+                <button type="button" onclick="func()">Click</button>
+            </div>
+            <hr>
+            <h3>Tên sản phẩm: <span> IHONE</span></h3>
+            <h3>Giá tiền: <span id="price"></span></h3>
+        </div>
+    </div>
+
+    <script>
+        let price = document.getElementById('price');
+        let func = async () => {
+            let amountValue = document.getElementById('amountValue');
+            
+            // console.dir(amountValue);
+            // console.log(amountValue['value']);
+            price.innerText = amountValue['value']*800 + " $";
+            price['style']['color'] = 'red';
+            console.dir(price['style'])
+            console.dir(price);
+
+        }
+    </script>
+</body>
+</html>

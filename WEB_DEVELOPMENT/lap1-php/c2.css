@@ -1,0 +1,29 @@
+.container{
+    width: 1200px;
+    margin: auto;
+}
+header.row{
+    height: 180px;
+    background-color: chocolate;
+}
+nav.row{
+    height: 45px;
+    background-color: crimson;
+}
+.col-9, .col-3{
+    float: right;
+    min-height: 500px;
+}
+.col-9{
+    width: 75%;
+    background-color: burlywood;
+}
+.col-3{
+    width: 25%;
+    background-color: indianred;
+}
+footer.row{
+    height: 120px;
+    background-color: firebrick;
+    clear: both;
+}
