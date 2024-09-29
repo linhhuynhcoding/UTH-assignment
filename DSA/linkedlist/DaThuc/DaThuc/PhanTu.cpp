@@ -6,8 +6,8 @@ using namespace std;
 
 PhanTu::PhanTu()
 {
-	this->coso = NULL;
-	this->somu = NULL;
+	this->coso = nullptr;
+	this->somu = nullptr;
 	this->next = nullptr;
 }
 

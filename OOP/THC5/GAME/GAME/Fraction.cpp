@@ -21,8 +21,8 @@ int gcd(int a, int b) {
 
 Fraction::Fraction()
 {
-	this->numerator = NULL;
-	this->denominator = NULL;
+	this->numerator = nullptr;
+	this->denominator = nullptr;
 }
 
 Fraction::Fraction(int tuso, int mauso)

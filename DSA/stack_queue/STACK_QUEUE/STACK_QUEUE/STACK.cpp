@@ -26,7 +26,7 @@ int STACK::pop()
 {
 	if (this->Linkedlist->Gethead() == nullptr) {
 		cout << "STACK RONG, KHONG LAY DUOC PHAN TU\n";
-		return NULL;
+		return nullptr;
 	}
 	int p = this->Linkedlist->Gethead()->Getdata();
 	this->Linkedlist->DeleteFirst();
