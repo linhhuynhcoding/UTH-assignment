@@ -1,0 +1,29 @@
+body {
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.container{
+     margin: 100px;
+     border: 2px solid greenyellow ;
+     padding: 10px;
+     width: 400px;
+     height: auto;
+     /* display: block; */
+     /* flex-direction: column; */
+     /* align-items: center; */
+     text-align: center;
+}
+
+.infor {
+     text-align: left;
+     display: block;
+     padding-inline: 10px;
+
+}
+.infor span {
+     margin-block-start: 1em;  
+     margin-block-end: 1em;  
+}

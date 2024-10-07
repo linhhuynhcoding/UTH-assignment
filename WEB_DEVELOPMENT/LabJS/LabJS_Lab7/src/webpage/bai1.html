@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>LABJS - LAB7 - BÀI 1</title>
+     <link rel="stylesheet" href="../styles/style1.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"> </script>
+</head>
+<body ng-app="b1">
+     <div class="container" ng-controller="hienthi">
+          <div class="title"><h3>THÔNG TIN SINH VIÊN</h3></div>
+          <img src="../../assets/{{photo}}" alt="">
+          <div class="infor">
+               <div><span>Họ tên:     </span><span>{{hoten}}   </span></div>
+               <div><span>Ngày sinh:  </span><span>{{ngaysinh}}</span></div>
+               <div><span>Phái:       </span><span>{{phai}}    </span></div>
+               <div><span>Điểm:       </span><span>{{diem}}    </span></div>
+          </div>
+     </div>
+
+     <script>
+          app= angular.module("b1", []);
+          app.controller("hienthi", xuly);
+
+          function xuly($scope) {
+               $scope.hoten = "Huỳnh Vũ Nhật Linh";
+               $scope.ngaysinh = "30/04/2005";
+               $scope.phai = "Nam";
+               $scope.diem = "10";
+               $scope.photo = "sachtrang.jpg";
+          }
+     </script>
+</body>
+</html>

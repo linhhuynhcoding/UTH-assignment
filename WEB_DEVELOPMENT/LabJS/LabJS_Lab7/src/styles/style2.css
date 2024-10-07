@@ -1,0 +1,40 @@
+body {
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+     margin: 100px;
+     padding: 10px;
+     background-color: cornsilk;
+     border-radius: 10px;
+     border: 2px solid darkred;
+     width: 500px;
+     height: auto;
+     /* display: block; */
+     /* flex-direction: column; */
+     /* align-items: center; */
+     text-align: center;
+}
+
+.form-style {
+     display: block;
+     text-align: left;
+}
+
+.form-group {
+     display: block;
+
+}
+
+label{
+     width: 100%;
+}
+
+input {
+     width: 100%;
+     
+}

@@ -1,0 +1,6 @@
+D:\Coding\UTH-assignment\DBMS\031024\031024\bin\Debug\031024.dacpac
+D:\Coding\UTH-assignment\DBMS\031024\031024\obj\Debug\031024.sqlproj.AssemblyReference.cache
+D:\Coding\UTH-assignment\DBMS\031024\031024\obj\Debug\_031024.dll
+D:\Coding\UTH-assignment\DBMS\031024\031024\obj\Debug\_031024.pdb
+D:\Coding\UTH-assignment\DBMS\031024\031024\bin\Debug\_031024.dll
+D:\Coding\UTH-assignment\DBMS\031024\031024\bin\Debug\_031024.pdb
