@@ -25,10 +25,10 @@ void toatau1() {
     int tmp;
     for (int i = 0; i < n; i++) {
         int tmp = A->pop();
-        if (tmp == NULL || a[i] < tmp) {
+        if (tmp == nullptr || a[i] < tmp) {
 
             tmp = B->pop();
-            if (tmp == NULL || tmp != a[i]) {
+            if (tmp == nullptr || tmp != a[i]) {
                 cout << "KHONG THE DI CHUYEN\n";
                 return;
             }
@@ -41,7 +41,7 @@ void toatau1() {
                 C.push_back("A-->B");
                 tmp = A->pop();
             }
-            if (tmp == NULL) {
+            if (tmp == nullptr) {
                 cout << "KHONG THE DI CHUYEN\n";
                 return;
             }

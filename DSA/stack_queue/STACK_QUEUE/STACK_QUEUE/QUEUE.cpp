@@ -22,7 +22,7 @@ int QUEUE::pop()
 {
 	if (this->Linkedlist->Gethead() == nullptr) {
 		cout << "QUEUE RONG, KHONG LAY DUOC PHAN TU\n";
-		return NULL;
+		return nullptr;
 	}
 	int p = this->Linkedlist->Gettail()->Getdata();
 	this->Linkedlist->DeleteTail();

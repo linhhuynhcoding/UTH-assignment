@@ -5,27 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styles1.css">
     <title>Lab04 - Bài 1</title>
+
     
 </head>
 <body>
     <div class="container">
         <header></header>
-        <nav>
-            <a href="home.html">Trang chủ</a>
-            <a href="about.html" target="page">Giới thiệu</a>
-            <a href="#">Liên hệ</a>
-            <a href="#">Góp ý</a>
-            <a href="#">Hỏi đáp</a>
+        <nav class ="menu">
+            <ul>
+                <li><a href="home.html">Trang chủ</a></li>
+                <li>
+                    <a href="about.html" target="page">Giới thiệu</a>
+                    
+                </li>
+                <li class="dropdown">
+                    <a href="#" >Liên hệ</a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="contact.html">EMAIL</a></li>
+                            <li><a href="mobile.html">PHONE</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="feedback.html">Góp ý</a></li>
+                <li><a href="faq.html">Hỏi đáp</a></li>
+
+            </ul>
         </nav>
         <article>
-            <iframe name="page" src="home.html" frameborder="0" scrolling="auto"></iframe>
+            <iframe name="page" id="ytplayer" type="text/html" src="https://www.youtube.com/embed/cd7UjDiq0M4?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
+            <!-- <iframe name="page" src="https://www.facebook.com/hvnhatlinh3004" referrerpolicy="same-origin" frameborder="0" scrolling="auto"></iframe> -->
         </article>
         <aside>
             <ul class="vnmenu">
-                <li><a href="#">  Máy tính xách tay</a></li>
-                <li><a href="#">  Điện thoại di động </a></li>
-                <li><a href="#">  Máy quay phim </a></li>
-                <li><a href="#">  Máy chụp ảnh </a></li>
+                <li><a href="#">Máy tính xách tay</a></li>
+                <li><a href="#">Điện thoại di động  </a></li>
+                <li><a href="#">Máy quay phim  </a></li>
+                <li><a href="#">Máy chụp ảnh   </a></li>
             </ul>
         </aside>
         <footer>

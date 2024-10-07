@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles6.css">
+    <title>Lab04 - Bài 6</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>FORM</h1>
+        <form class="_form" action="" method="post">
+            
+            <div class="form-group">
+                Họ và Tên: 
+                <input type="text" name="" id="">
+           </div>
+           <fieldset style="margin-bottom: 10px;">
+                <legend>Giới tính</legend>    
+                <label for="radio" style="position: static;">
+                     <input style="margin-bottom: 0; width: 20px;" type="radio" name="" id="" checked> Nam 
+                     <input style="margin-bottom: 0; width: 20px;" type="radio" name="" id=""> Nữ 
+                </label>           
+           </fieldset>
+           <div class="form-group" tabindex="1">
+                Ngày sinh: 
+                <input type="date" name="" id="">
+           </div>
+           <div class="form-group" tabindex="1">
+                Điểm: 
+                <input type="number" name="" id="">
+           </div>
+           <div class="form-group" tabindex="1">
+                Nghề nghiệp: 
+                <input list="careers" type="text">
+                <datalist id="careers">
+                     <option value="Lập trình viên"></option>
+                     <option value="Tài xế"></option>
+                     <option value="Công nhân"></option>
+                     <option value="Thợ may"></option>
+                     <option value="Kỹ sư"></option>
+                   </datalist>
+           </div>
+           <fieldset style="margin-bottom: 10px;">
+                <legend>Sở thích</legend>    
+                <label for="" style="display: block;">
+                     <input style="margin-bottom: 0; width: 20px;" type="checkbox" name="" id=""> THỂ THAO <br>
+                     <input style="margin-bottom: 0; width: 20px;" type="checkbox" name="" id=""> ÂM NHẠC <br>
+                     <input style="margin-bottom: 0; width: 20px;" type="checkbox" name="" id=""> DU LỊCH <br>
+                     <input style="margin-bottom: 0; width: 20px;" type="checkbox" name="" id=""> ẨM THỰC <br>
+                </label>          
+           </fieldset>
+           <div class="form-group">
+                GHI CHÚ:
+                <textarea style="display: block;" name="" id=""></textarea>
+           </div>
+           <hr />
+           <button >Đăng Ký</button>
+           <button >Nhập Lại</button>
+        </form>
+    </div>    
+</body>
+</html>
