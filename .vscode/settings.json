@@ -14,6 +14,7 @@
         "ranges": "cpp",
         "span": "cpp",
         "type_traits": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "chrono": "cpp"
     }
 }
