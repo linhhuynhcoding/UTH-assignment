@@ -6,7 +6,7 @@ const int INF = 1e9;
 
 int n, m;
 
-void dp()
+void solve()
 {
     set <int, greater<int>> cash = {100, 50, 20, 10};
     cin >> n;
@@ -21,7 +21,7 @@ void dp()
 
 int main()
 {
-    dp();
+    solve();
 }
 
 /*  

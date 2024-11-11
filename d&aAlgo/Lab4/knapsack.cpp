@@ -6,7 +6,7 @@ const int INF = 1e9;
 
 int n, m;
 
-void dp()
+void solve()
 {
     int w;
     cin >> n >> w;
@@ -31,7 +31,7 @@ void dp()
 
 int main()
 {
-    dp();
+    solve();
 }
 
 /*
