@@ -4,3 +4,4 @@
 *.rar
 *.exe
 **/DATABASE
+.idea/
